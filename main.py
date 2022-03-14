@@ -1,6 +1,7 @@
 import collections
 import json
 import numpy as np
+import sys
 
 
 PACMAN = 3.
@@ -24,7 +25,7 @@ def route(board, ghost):
                 seen.add((x2, y2))
 
 
-with open("C:/Users/glaze/Downloads/interview2/board1.npy_array.json") as f:
+with open(sys.argv[2]) as f:
     data = json.load(f)
 
 board = np.asarray(data)
